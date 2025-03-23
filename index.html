@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .rocket {
+            width: 100px;
+            position: absolute;
+            bottom: -150px;
+            animation: launch 3s ease-out forwards;
+        }
+        @keyframes launch {
+            to {
+                bottom: 100vh;
+            }
+        }
+        .message {
+            position: absolute;
+            bottom: 20px;
+            font-size: 18px;
+            opacity: 1;
+            animation: fadeOut 3s ease-in forwards;
+        }
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.imgur.com/U3E2GR4.png" alt="Rocket" class="rocket">
+    <div class="message">Please give us a moment...</div>
+    
+    <script>
+        setTimeout(() => {
+            window.location.href = "https://your-destination-link.com";
+        }, 3000);
+    </script>
+</body>
+</html>
